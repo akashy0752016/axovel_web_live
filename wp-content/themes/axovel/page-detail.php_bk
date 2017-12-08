@@ -1,0 +1,118 @@
+<?php
+/**
+ * Template Name: blog_detail Template
+ *
+ * 
+ */
+
+get_header(); ?>
+
+<main>
+ <!-- Page Content -->
+      <section class="about_us blog_banner purchase animatedParent " data-sequence='500'>
+    </section>
+  <div class="container blog_section blog_page">
+
+    <ul id="filters" class="clearfix">
+      <li>
+      <?php
+      $args = array(
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => 14,
+      );
+      $data = array();
+      $slug = array();
+      $categories = get_categories( $args );
+      $i=0;
+      foreach ($categories as $key => $category) {
+        $cat_id[] = $category->cat_ID;
+        $data[$i]['id'] = $category->cat_ID;
+        $data[$i]['title'] = $category->cat_name;
+        $data[$i]['slug'] = $category->slug;
+        $class[] = '.'.$category->slug;
+        $i++;
+      }
+      ?>
+      <span class="filter active" data-filter="all">All</span></li>
+      <?php
+      foreach ($data as $value) {
+        ?>
+        <li><span class="filter" data-filter=".<?=$value['slug']; ?>"><?=$value['title'] ?></span></li>
+        <?php
+      }
+      ?>
+    </ul>
+
+    <div id="portfoliolist">
+    <?php
+    $args = array(
+        'posts_per_page'   => 5,
+        'offset'           => 0,
+        'category'         => 14,
+        'orderby'          => 'date',
+        'order'            => 'DESC',
+        'post_type'        => 'post',
+        'post_status'      => 'publish',
+        'suppress_filters' => true 
+      );
+    $catPost = get_posts($args);
+    foreach ($catPost as $value) {
+      $post_categories = get_the_category($value->ID);
+      $post_class = array();
+      foreach ($post_categories as $post_category) {
+        $post_class[] = $post_category->slug;        
+      }
+      ?>
+      <div class="portfolio <?=implode(" ", $post_class) ?>" data-cat="<?=implode(" ", $post_class) ?>">
+        <div class="inner_item">
+        <?php if (wp_get_attachment_url( get_post_thumbnail_id($value->ID) )!="") {
+          ?>
+            <img src="<?=wp_get_attachment_url( get_post_thumbnail_id($value->ID) ); ?>" class="blog_image">
+          <?php
+          } else {
+            ?>
+            <img src="<?php bloginfo('template_directory') ?>/images/blog_img2.png" class="blog_image">
+            <?php
+          }
+          ?>
+          
+          <div class="blog_detail">
+            <div class="date_comment_section">
+              <div class="bbg date_sec ">
+              <?=date('d <p>M</p>', strtotime($value->post_date)); ?>
+              </div>
+              <div class="comment">
+                <img src="<?php bloginfo('template_directory') ?>/images/chat_icon_black.png">
+                <span class="nbr">
+                  <?=get_comments_number($value->ID) ?>
+                </span>
+              </div>
+            </div>
+            <div class="title_dis">
+              <div class="title_sec">
+                <?=$value->post_title; ?>
+              </div>
+              <div class="dis_sec">
+                <?=implode(' ', array_slice(str_word_count($value->post_content,1), 0, 40)) ?>
+              </div>
+              <a href="#" class="read_more">Continue Reading </a>
+              <!-- <a href="<?=get_permalink($value->ID); ?>" class="read_more">Continue Reading </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php
+    }
+    ?>
+      
+     
+    
+  </div><!-- container -->
+  <div class="col-md-12">
+    <div class="view_all">
+    <a href="#"><img src="<?php bloginfo('template_directory') ?>/images/thin-add-button.png"><p>View all</p></a>
+    </div>
+  </div>
+</main> 
+<?php get_footer(); ?>

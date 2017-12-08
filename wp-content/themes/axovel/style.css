@@ -1,0 +1,50 @@
+/*
+Theme Name: Axovel Software Pvt. Ltd
+Version: 1.0
+Theme URI: axovel.com
+Description: The Custom theme for Axovel Wesite
+Author: Akash
+Author URI: axovel.com
+*/
+
+.navigation_post{position :absolute !important;background-color:#000; padding: 10px 0px;width: 100% !important;top: 100px;height: 50px;}
+.navigation_post .previous {text-align:left;}
+.navigation_post .next {text-align:right;}
+.has-dark-bg:not(.is-scrolled) .project-navigation{color: white;}
+.project-navigation.link-to-list {position: absolute;left: 50%;width: 40px;height: 45px;margin-top: -7px;-webkit-transform: translateX(-50%);-ms-transform: translateX(-50%);transform: translateX(-50%);}
+.has-dark-bg:not(.is-scrolled) .project-navigation.link-to-list .square{border-color: white;}
+.project-navigation.link-to-list .square:nth-child(1){top: 11px;left: 9px;}
+.project-navigation.link-to-list .square {position: absolute;width: 10px;height: 10px;border: 2px solid #ffffff;-webkit-transition: all 0.2s;transition: all 0.2s;}
+.has-dark-bg:not(.is-scrolled) .project-navigation {color: white;}
+.project-navigation.link-to-list .square:nth-child(2){top: 11px;left: 22px;}
+.project-navigation.link-to-list .square:nth-child(3){top: 24px;left: 9px;}
+.project-navigation.link-to-list .square:nth-child(4){top: 24px;left: 22px;}
+.navigation_post .link-to-list:hover .square{border: 5px solid #ffffff;}
+.navigation_post div a .fa {color:#fff;padding: 0px 5px;font-size: 38px;margin-top: -5px;}
+.navigation_post div a span {color:#fff; font-size:16px;}
+.navigation_post .previous a span {display: none;white-space: nowrap;vertical-align: top;overflow: hidden;transition: all .5s;margin-top: 5px;}
+.navigation_post .previous a span { margin-right: -4px; }
+.navigation_post .previous a:hover span { margin-right: 0;margin-top: 5px;margin-right: 5px;display: inline-block; width:auto !important;}
+.navigation_post .next a span {display: none;white-space: nowrap;vertical-align: top;overflow: hidden;transition: all .5s;margin-top: 5px;}
+.navigation_post .next a span { margin-right: -4px; }
+.navigation_post .next a:hover span { margin-right: 0;margin-top: 5px;margin-left: 5px;display: inline-block; width: auto !important;}
+@media screen and (max-width:780px) {.navigation_post div a .fa { color: #fff; font-size: 20px !important;padding-top: 5px; }.navigation_post div a span {color:#fff; font-size:14px;}.navigation_post {padding: 20px 0px !important;}.project-navigation.link-to-list {margin-top: -22px;}.navigation_post .all {width: 100% !important;}.navigation_post .next,.navigation_post .previous{display: none;}}
+@media screen and (max-width:1920px) {.navigation_post .next,.navigation_post .previous {width: 48%;}.navigation_post .all {width: 2%;}}
+@media screen and (max-width:1280px){.navigation_post .next,.navigation_post .previous {width: 48%;}.navigation_post .all {width: 2%;}}
+.blog_container {padding:5px; margin-bottom:20px;}
+
+xmp {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: auto;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}

@@ -1,0 +1,85 @@
+@media screen and (min-width:1200px){
+	.container {
+    	width: 79.6%;
+	}
+}
+
+@media screen and (min-width: 992px){
+	.footer_link {
+	    width: 20%;
+	    float: left;
+	}
+
+}
+@media screen and (min-width:768px){
+	.right_side{ float: right;}
+}
+
+@media screen and (max-width:1200px){
+	
+	.web_devlopment_section{
+		padding-bottom: 15rem;
+	}
+	.f_a_sec h1{
+		    margin: 11rem 0px 7rem;
+	}
+	.ecommerce_section{
+		margin-top: -6px;
+	}
+	.BUSINESS_SECTION{
+		padding: 10rem 0;
+	}
+}
+@media screen and (max-width:992px){
+	.footer_link.col-xs-12.col-sm-6.md-3.col-lg-3 {
+    height: 333px;}
+}
+@media screen and (max-width:767px){
+	.navbar-default .navbar-toggle{ border-color:transparent;}
+	.navbar-toggle{
+		    margin-top: 33px;
+	}
+	.navbar-nav>li>a{ line-height: 46px;}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+		background:transparent;
+	}
+	.navbar-default .navbar-toggle .icon-bar+{}
+	.navbar-default .navbar-toggle .icon-bar:nth-child(2){}
+	.navbar-nav{
+	    float: none;
+	    text-align: center;
+	}
+	.navbar-toggle .icon-bar+.icon-bar{
+		margin-top: 6px;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+		    background: rgba(0, 0, 0, 0.27)
+	}
+	.navbar-default .navbar-toggle .icon-bar{ background-color: #fff}
+	.navbar-toggle .icon-bar{
+	    width: 32px;
+   		height: 3px;
+	}
+	.web_devlopment_section{
+		padding-bottom: 7rem;
+	}
+	.web_devlopment_section{ background-image: none;}
+	.inner_banner_section{ width: 100%;}
+	.f_a_sec h1 {
+	    margin: 6rem 0px 2rem;
+	}
+	.BUSINESS_SECTION{
+		padding: 7rem 0;
+	}
+	.mobile_section  .right_container {margin-top: 0;}
+.mobile_section  .text-right{ text-align: left !important;}
+.footer_link.col-xs-12.col-sm-6.md-3.col-lg-3, .footer .copyright{
+    padding: 15px 35px;
+    height: auto;}
+    .pull-right{
+    	float: left !important;
+    }
+    .copy_right_section li{
+    	    margin: 0px 24px 10px 0;
+    }
+}
